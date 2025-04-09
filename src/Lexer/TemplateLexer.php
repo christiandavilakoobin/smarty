@@ -381,7 +381,7 @@ class TemplateLexer
     {
 
        $to = $this->dataLength;
-       preg_match("/[*]{$this->compiler->getRdelPreg()}?/",$this->data,$match,PREG_OFFSET_CAPTURE,$this->counter);
+       preg_match("/[*]{$this->compiler->getRdelPreg()}/",$this->data,$match,PREG_OFFSET_CAPTURE,$this->counter);
         if (isset($match[0][1])) {
             $to = $match[0][1] + strlen($match[0][0]);
         } else {
