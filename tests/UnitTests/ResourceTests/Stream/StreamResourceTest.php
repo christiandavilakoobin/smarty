@@ -27,10 +27,6 @@ class StreamResourceTest extends PHPUnit_Smarty
         fclose($fp);
     }
 
-    public function testInit()
-    {
-        $this->cleanDirs();
-    }
     public function tearDown(): void
     {
         parent::tearDown();
@@ -62,15 +58,6 @@ class StreamResourceTest extends PHPUnit_Smarty
     {
         $tpl = $this->smarty->createTemplate('global:mytest', null, null, $this->smarty);
         $this->assertEquals('hello world {$foo}', $tpl->getSource()->getContent());
-    }
-
-    /**
-     * test usesCompiler
-     */
-    public function testUsesCompiler()
-    {
-        $tpl = $this->smarty->createTemplate('global:mytest');
-	    $this->markTestIncomplete();
     }
 
     /**

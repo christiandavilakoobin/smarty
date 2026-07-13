@@ -21,10 +21,6 @@ class StringResourceTest extends PHPUnit_Smarty
     }
 
 
-    public function testInit()
-    {
-        $this->cleanDirs();
-    }
 
     protected function relative($path)
     {
@@ -75,15 +71,6 @@ class StringResourceTest extends PHPUnit_Smarty
     {
         $tpl = $this->smarty->createTemplate('string:hello world{$foo}');
         $this->assertEquals('hello world{$foo}', $tpl->getSource()->getContent());
-    }
-
-    /**
-     * test usesCompiler
-     */
-    public function testUsesCompiler()
-    {
-        $tpl = $this->smarty->createTemplate('string:hello world');
-	    $this->markTestIncomplete();
     }
 
     /**

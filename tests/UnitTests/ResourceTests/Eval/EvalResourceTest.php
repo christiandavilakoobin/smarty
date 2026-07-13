@@ -21,10 +21,6 @@ class EvalResourceTest extends PHPUnit_Smarty
     }
 
 
-    public function testInit()
-    {
-        $this->cleanDirs();
-    }
     /**
      * test template eval exits
      */
@@ -67,15 +63,6 @@ class EvalResourceTest extends PHPUnit_Smarty
     {
         $tpl = $this->smarty->createTemplate('eval:');
         $this->assertEquals('', $this->smarty->fetch($tpl));
-    }
-
-    /**
-     * test usesCompiler
-     */
-    public function testUsesCompiler()
-    {
-        $tpl = $this->smarty->createTemplate('eval:hello world');
-        $this->markTestIncomplete();
     }
 
     /**
